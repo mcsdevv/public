@@ -2,13 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 // eslint-disable-next-line no-unused-vars
-import styled from 'styled-components'
-import tw from 'twin.macro'
-
-const Container = tw.section`text-center overflow-auto mx-auto my-0`
-const H1 = tw.h1`font-bold text-4xl font-extrabold tracking-tight leading-12 mt-2`
-const P = tw.p`mt-4 tracking-reading text-base font-serif`
-const Lede = tw.p`mt-4 tracking-reading font-serif text-lg`
+import { SEO, Layout, Prose, Highlight } from '..'
+import { Container, H1, P, Lede } from './styles'
 
 const Hero: React.FC = () => {
   let sass = []
@@ -57,7 +52,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container className="prose">
       <img
         alt="It’s Tim Feeley!"
         className="block w-48 mx-auto"
@@ -66,7 +61,7 @@ const Hero: React.FC = () => {
       <H1>{sass.map((item) => [<span key={item}>{item}</span>, ` `])}</H1>
       <Lede>
         {[
-          `You’ve found me! I’m `,
+          `I’m `,
           <Link key="tfbio" to="/bio" className="link callout">
             Tim Feeley
           </Link>,
@@ -82,9 +77,7 @@ const Hero: React.FC = () => {
       </P>
       <P>
         Nobody has it all figured out, but together,{` `}
-        <span className="highlighter">
-          we can make better mistakes tomorrow.
-        </span>
+        <Highlight>we can make better mistakes tomorrow.</Highlight>
       </P>
     </Container>
   )

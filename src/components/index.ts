@@ -1,5 +1,5 @@
 export { default as Theme } from './Theme'
-export { Prose } from './Theme'
+export { Highlight, Prose } from './Theme'
 export { default as Layout } from './Layout'
 export { default as SEO } from './SEO'
 export { default as Hero } from './Hero'
