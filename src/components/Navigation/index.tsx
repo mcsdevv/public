@@ -17,8 +17,8 @@ export const Navigation: React.FC = () => {
         <NavigationLink to="/">
           <Logo />
         </NavigationLink>
-        <NavigationLinkContainer position="right">
-          <NavigationLink to="#">Writing</NavigationLink>
+        <NavigationLinkContainer position="right" tw="relative">
+          <NavigationLink to="/posts">Writing</NavigationLink>
         </NavigationLinkContainer>
       </NavigationComponent>
     </Header>

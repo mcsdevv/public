@@ -1,6 +1,7 @@
 export { default as Theme } from './Theme'
-export { Highlight, Prose } from './Theme'
+export { Highlight, Prose, Title, Introduction } from './Theme'
 export { default as Layout } from './Layout'
 export { default as SEO } from './SEO'
 export { default as Hero } from './Hero'
 export { default as Navigation } from './Navigation'
+export { default as PostCard } from './Posts/Cards'

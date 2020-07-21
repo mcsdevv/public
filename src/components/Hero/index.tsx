@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 // eslint-disable-next-line no-unused-vars
-import { SEO, Layout, Prose, Highlight } from '..'
+import tw, { css, styled } from 'twin.macro'
+import { Highlight } from '..'
 import { Container, H1, P, Lede } from './styles'
 
 const Hero: React.FC = () => {
@@ -39,7 +40,7 @@ const Hero: React.FC = () => {
       if (timeofday === `morning`) {
         sass = [`Top of the morning!`]
       } else if (timeofday === `evening`) {
-        sass = [`Good`, `${weekday} eve, friend!`]
+        sass = [`Good evening!`]
       } else {
         sass = [`Happy`, `${weekday}, friend!`]
       }
@@ -48,34 +49,35 @@ const Hero: React.FC = () => {
   }
 
   if (timeofday === `night`) {
-    sass = [`Good evening, you night owl 👀`]
+    sass = [`Good evening, night owl 👀`]
   }
+
+  const Illustration = tw.img`block w-48 mx-auto`
 
   return (
     <Container className="prose">
-      <img
-        alt="It’s Tim Feeley!"
-        className="block w-48 mx-auto"
-        src="/images/tim_feeley-illustrated.png"
-      />
+      <Illustration alt="Tim Feeley" src="/images/tim_feeley-illustrated.png" />
       <H1>{sass.map((item) => [<span key={item}>{item}</span>, ` `])}</H1>
-      <Lede>
+      <Lede tw="text-black">
         {[
           `I’m `,
-          <Link key="tfbio" to="/bio" className="link callout">
+          <Link key="tfbio" to="/bio" tw="font-sans underline font-bold">
             Tim Feeley
           </Link>,
-          `, and I’m a people centric Product Manager.`,
+          `, and for the past decade, I’ve led Product teams to ship usable, useful products at global scale.`,
         ]}
       </Lede>
-      <P>
-        I’ve spent the past decade at companies like Google, Facebook and
-        Tripadvisor building useful, usable software at global scale, because I
-        believe that technology can help humans achieve amazing things. Every
-        day, I find myself learning something new. I’ll try to share some
-        highlights here.
+      <P tw="text-base">
+        With experience that range from Boston-area startups to Silicon Valley
+        staples like Tripadvisor, Facebook and Google, I’ve been fortunate to
+        have worked alongside the best in the business, learning something new
+        each and every day.
       </P>
-      <P>
+      <P tw="text-sm">
+        I’ll do my best to share some of the more interesting lessons on this
+        blog.
+      </P>
+      <P tw="text-xs">
         Nobody has it all figured out, but together,{` `}
         <Highlight>we can make better mistakes tomorrow.</Highlight>
       </P>

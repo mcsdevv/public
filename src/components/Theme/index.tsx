@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../../tailwind.config.js'
 
-export { Prose, Highlight } from './styles'
+export { Prose, Highlight, Title, Introduction } from './styles'
 
 const { theme } = resolveConfig(tailwindConfig)
 

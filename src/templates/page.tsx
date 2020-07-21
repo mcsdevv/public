@@ -4,14 +4,9 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 
 // eslint-disable-next-line no-unused-vars
-import styled, { css } from 'styled-components'
-import tw from 'twin.macro'
+import tw, { css, styled } from 'twin.macro'
 
-import { SEO, Layout, Prose } from '../components'
-
-export const Title = tw.h1`font-sans text-4xl font-bold tracking-tight leading-10`
-
-const Introduction = tw.div`text-center`
+import { Introduction, Layout, Prose, SEO, Title } from '../components'
 
 interface Properties {
   data: any

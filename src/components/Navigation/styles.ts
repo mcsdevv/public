@@ -17,8 +17,8 @@ export const NavigationComponent = styled.nav`
 `
 
 export const NavigationLink = styled(Link)`
-  ${tw`flex items-center text-sm font-semibold`}
-  ${tw`px-4 py-2 text-gray-200 rounded-md`}
+  ${tw`flex items-center font-sans text-sm font-semibold`}
+  ${tw`z-50 px-4 py-2 text-gray-200 rounded-md`}
   ${tw`hover:text-white hover:bg-purple-700`}
   ${tw`focus:text-white focus:bg-purple-700`}
   ${tw`active:bg-purple-900`}

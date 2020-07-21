@@ -1,6 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import tw, { css, styled } from 'twin.macro'
 
+export const Introduction = tw.div`text-center`
+
+export const Title = tw.h1`font-sans text-4xl font-bold tracking-tight leading-10`
+
 export const Highlight = styled.span`
   ${tw`tracking-reading font-semibold align-baseline`}
   background: linear-gradient(90deg, #ffe9ba 50%, #fbe0c2 50%, #ffe9ba 100%);
@@ -11,7 +15,7 @@ export const Highlight = styled.span`
 `
 
 export const Prose = styled.article`
-  ${tw`mx-auto font-serif text-gray-800`}
+  ${tw`tracking-reading  mx-auto font-serif text-gray-800`}
   max-width: 70ch;
 
   @media (min-width: 70rem) {

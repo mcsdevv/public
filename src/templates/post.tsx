@@ -1,28 +1,10 @@
-import { MDXProvider } from '@mdx-js/react'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import styled from 'styled-components'
-import tw from 'twin.macro'
+import { graphql } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { SEO, Layout, Prose } from '../components'
-
-const Introduction = tw.div`text-center`
-const MetaText = tw.p`text-cool-gray-600 mt-3  text-xs`
-
-const TlDrBox = tw.aside`mx-4 my-9 relative py-3 px-6 border border-indigo-700 rounded sm:max-w-sm sm:mx-auto md:max-w-xl lg:max-w-2xl`
-const TlDrTitle = tw.span`select-none cursor-pointer no-underline
-    left-1/2 absolute w-24 -mt-6 -ml-12 font-sans font-bold text-center text-indigo-800 bg-white`
-const TlDrText = styled.p`
-   {
-    ${tw`tracking-reading px-2 py-0 my-0 font-sans text-lg font-semibold text-left`}
-  }
-`
-const TlDrTip = styled.span`
-   {
-    ${tw`bg-cool-gray-800 absolute z-20 w-64 px-6 py-4 mt-3 -ml-32 space-y-1 font-serif text-xs text-white rounded shadow-2xl`}
-  }
-`
+import { Layout, Introduction, Prose, SEO, Title } from '../components'
+import { MetaText, TlDrBox, TlDrText, TlDrTip, TlDrTitle } from './styles'
 
 interface Properties {
   data: any
@@ -62,9 +44,9 @@ export default class extends React.PureComponent<Properties, State> {
     return (
       <Layout>
         <SEO title={post.frontmatter.title} />
-        <Prose className="tracking-reading prose">
+        <Prose className="prose">
           <Introduction>
-            <h1 tw=" mt-12 mb-6">{post.frontmatter.title}</h1>
+            <Title>{post.frontmatter.title}</Title>
             <MetaText>
               <>Published</>
               <time dateTime={post.frontmatter.date}> {prettyDate}</time>
