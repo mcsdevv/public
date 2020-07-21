@@ -14,8 +14,35 @@ export const Highlight = styled.span`
   padding: 0.125rem 0.25rem 0.12rem;
 `
 
+// { BasicButton, BasicLink, BlueButton, PinkLink, IndigoButton, PinkButton }
+export const BasicButton = tw.button`
+  px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded
+  transition ease-in-out duration-300  focus:outline-none
+`
+
+export const BasicLink = tw.a`
+  px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded
+  transition ease-in-out duration-300  focus:outline-none block
+`
+
+export const BlueButton = styled(BasicButton)`
+  ${tw`hover:bg-blue-500 active:border-blue-700 focus:border-blue-700 focus:shadow-outline-blue text-white bg-blue-600`}
+`
+
+export const PinkButton = styled(BasicButton)`
+  ${tw`hover:bg-pink-500 active:border-pink-700 focus:border-pink-700 focus:shadow-outline-pink text-white bg-pink-600`}
+`
+
+export const PinkLink = styled(BasicLink)`
+  ${tw`hover:bg-pink-500 active:border-pink-700 focus:border-pink-700 focus:shadow-outline-pink text-white bg-pink-600`}
+`
+
+export const IndigoButton = styled(BasicButton)`
+  ${tw`hover:bg-indigo-500 active:border-indigo-700 focus:border-indigo-700 focus:shadow-outline-indigo text-white bg-indigo-600`}
+`
+
 export const Prose = styled.article`
-  ${tw`tracking-reading  mx-auto font-serif text-gray-800`}
+  ${tw`tracking-reading mx-auto font-serif text-gray-800`}
   max-width: 70ch;
 
   @media (min-width: 70rem) {
@@ -25,8 +52,9 @@ export const Prose = styled.article`
   blockquote {
     & {
       ${tw`border-l-4 border-indigo-800 rounded-sm shadow-sm`}
-      ${tw`w-10/12 px-4 py-0 m-4 font-sans text-lg tracking-tight`}
+      ${tw`w-10/12 px-4 py-0 m-4 font-sans text-lg font-semibold tracking-tight`}
 
+      font-style: inherit;
       border-top: 1px solid #f1f5f9;
       border-right: 1px solid #f1f5f9;
       border-bottom: 1px solid #f1f5f9;
@@ -36,6 +64,11 @@ export const Prose = styled.article`
       }
     }
   }
+  blockquote p:first-of-type::before,
+  blockquote p:last-of-type::after {
+    content: '';
+  }
+
   h1,
   h2,
   h3,

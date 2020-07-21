@@ -3,7 +3,15 @@ import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { Layout, Introduction, Prose, SEO, Title } from '../components'
+import {
+  Layout,
+  Introduction,
+  Prose,
+  SEO,
+  Title,
+  AssetCard,
+  AssetLink,
+} from '../components'
 import { MetaText, TlDrBox, TlDrText, TlDrTip, TlDrTitle } from './styles'
 
 interface Properties {
@@ -97,7 +105,7 @@ export default class extends React.PureComponent<Properties, State> {
               <TlDrText>{post.frontmatter.tldr}</TlDrText>
             </TlDrBox>
           </Introduction>
-          <MDXProvider>
+          <MDXProvider components={{ AssetCard, AssetLink }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
         </Prose>
