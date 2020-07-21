@@ -1,8 +1,48 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby + Typescript + Tailwind CSS + Styled-Components Starter`,
-    description: `A bare-bones Typescript + Tailwind CSS + Styled-Components + starter to kickoff your project.`,
-    author: `@reevmich`
+    title: `Tim Feeley`,
+    description: `People-centric Product Management`,
+    author: `@timfee`,
   },
-  plugins: [`gatsby-plugin-styled-components`, 'gatsby-plugin-typescript']
-};
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-slug`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-styled-components`,
+  ],
+}

@@ -1,3 +1,6 @@
-export * from './Button';
-export * from './icons';
-export { default } from './theme';
+export { default as Theme } from './Theme'
+export { Prose } from './Theme'
+export { default as Layout } from './Layout'
+export { default as SEO } from './SEO'
+export { default as Hero } from './Hero'
+export { default as Navigation } from './Navigation'

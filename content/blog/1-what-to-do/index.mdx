@@ -1,0 +1,156 @@
+---
+category: 'blog'
+cover: './cover.jpg'
+title: What to do when you don’t know what to do next
+description: 'Lots of PMs face the “I have no idea what I’m doing” moment. It’s common, it sucks, and it can make us feel stuck. To get un-stuck, get specific.'
+date: '2020-06-14'
+published: true
+slug: 'what-to-do-when-you-dont-know-what-to-do'
+tldr: Lots of PMs face the “I have no idea what I’m doing” moment. It’s common, it sucks, and it can make us feel stuck. To get un-stuck, get specific.
+---
+
+About ten years ago, my boss gave me some great news: “Tim, the CEO signed
+off on the Google Maps contract—your team can start switching over and delivering
+those UX enhancements you pitched.”
+
+Everything was going great, until I got an email from our
+Head of Advertising: _“This looks great, but where’s the sponsored UI and custom pins?”_
+
+Ah, crap. In all of the excitement, we never had any formal discussions
+about bringing some of the hard-coded sponsorship components into the new system.
+
+In offhand discussions with engineers, it was clear that it would be a
+challenge to override some of the low-level Google Maps UIs to build the
+sponsored elements. And much of that UI was what made Google’s UI superior.
+It wasn’t a widely sold placement, and we didn’t think too much of it—until we had to.
+
+I had to write the dreaded ‘whoopsie’ email:
+_“Oh, sorry I forgot to connect about this earlier... it’s not really feasible to incorporate the previous solution as-is into Google Maps.”_
+
+Even though the existing product didn’t generate a _ton_ of money,
+it did generate _some_. Even after some initial discussions,
+it was clear that we were in a bit of a stalemate:
+Advertising didn’t want to leave money on the table.
+Product and UX didn’t want the new launch to include unexpected behavior
+introduced by sponsored elements.
+
+The more I talked with my stakeholders, the more I noticed that I
+was playing telephone and not adding a ton of value, or driving towards a resolution.
+
+I was relaying information, and not much else:
+“UX isn’t on board with that treatment” and “Advertising doesn’t think that’s prominent enough.”
+
+How was I supposed to weigh the modest (but nonzero revenue) tradeoffs
+against a longer-term UX bet?
+
+Relatively new into my career, I had my first “I have no idea what I’m doing” moment.
+
+## It’s not you. It’s the problem.
+
+One of the root causes of my situation—though I didn’t appreciate it
+at the time—was that the late inclusion of another team meant we started
+evaluating solutions and tradeoffs with virtually _no_ shared context.
+
+**There wasn’t clear alignment on the problem we were solving.**
+
+But, a decade ago and with less experience, I didn’t know that.
+I thought it had to be me. _“Why didn’t I get that MBA?”_
+I’d ask the cat. _If only I arrived out of the womb with the adjusted value of a sponsored element for an improved navigation!_
+
+## I was stuck.
+
+I was still playing telephone between stakeholders, and it wasn’t clear
+if things were moving towards a resolution.
+
+> As many a PM mentor would eventually remind me, I needed a better answer for “**Why are we doing this?**” than “we got the budget for Google Maps.”
+
+As I started reviewing my early notes, it became clear that not even **\*I\***
+had clear answers to some foundational questions:
+
+- What was wrong with the old maps provider?
+- What made us decide to change—to Google—and do it now?
+- What do we want users to do now, that they weren’t doing before?
+
+Starting to answer these questions chipped away at this big monolith
+of a problem and created smaller, more manageable problems to investigate instead.
+
+Eventually, we were able to build the shared context we so sorely lacked,
+and found a better way to keep those sponsorships whole without
+digging into the low-level guts of the Google Maps APIs.
+
+## How to get un-stuck.
+
+Maybe you’re in a new role. Or you’ve inherited an in-flight project.
+Perhaps you’ve done everything right, and things are coming your way
+that you don’t have the answers to.
+
+**When you’re stuck: go back to the basics.**
+
+If you aren’t sure where to go next in pursuit of a
+solution, odds are you don’t fully understand the problem yet.
+
+Try this.
+
+## Stop.
+
+If there’s already in-flight work, there’s nothing wrong with saying
+“I’d like to take a moment and make sure I’m understanding the problem correctly.”
+
+## Build a baseline.
+
+If you’re confused or feel like you don’t have a handle on everything
+going on around you, then start by writing down what you _do_ have a handle on.
+
+- **If you’re stuck:** Make a grid that has rows for each person (or team) you’re working with, and add column headings for things like “their goals” and “unresolved concerns” to start.
+- **If you’re still stuck:** Make a list of all the stuff you want answers to, and the first steps you’d take towards figuring it out.
+
+The key here is to have some sort of artifact that you can use to find smaller,
+more tractable problems.
+
+## Expand your baseline.
+
+Your initial artifact may not have all of the details, but it’s a start.
+
+Validate it with the folks in your grid:
+_“Just double checking that this reflects the latest thinking from you/your team.”_
+
+If you’re working on a high-stakes problem, it’s best to make sure everyone’s
+OK with how you’re representing their problem before sharing with other groups.
+Otherwise, it’s probably fine to share draft thinking across groups.
+
+## Proceed.
+
+Once you start reviewing and refining your artifact, odds are, you’ll
+find a path forward that’s suitable for your project.
+
+That’s great—you’ve just un-stuck yourself by:
+
+- stopping a moment
+- collecting what you know
+- validating it, and making sure folks are aligned.
+
+If you haven’t found a path forward, don’t despair!
+As you make your way through your list of “things I want to know,”
+consider asking people on that list who _they_ would talk to,
+and what stuff _they_ wish they knew.
+
+## Helpful hints
+
+This advice isn’t anything new or novel, but it can be difficult to
+access when you’re stressed or anxious.
+
+**If you’re noticing these behaviors in yourself (or someone else), it might be time to re-read this post:**
+
+- _Playing telephone:_ You’re involved with developing a solution, but you’re just relaying information without an opinion of your own yet.
+- _Different (or no) goalposts:_ Different people have different definitions of “finished”—or none at all.
+
+## Summary
+
+It’s normal and expected to have some moments where you’re
+totally stumped about what to do next. But it doesn’t mean you’re
+a bad PM, or otherwise not cut out for the job.
+
+It usually means that there’s some foundational pieces of the
+problem space that are missing. So, take some time for yourself
+to map out what you know, and what’s missing, and enlist the
+support of your team to flesh it out.
